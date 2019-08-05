@@ -1,2 +1,6 @@
 # TivaC-Series-Accelerometer
 This lab is designed to further the students’ understanding of the expansion capabilities of the Digilent Orbit BoosterPack.  In its simplest form, this lab enables the students to interact with the Digilent Orbit Board’s ADXL345 accelerometer while utilizing the I2C bus to transmit and receive data.
+
+The Digilent Orbit board has an onboard ADXL345 accelerometer that uses a serial protocol, the I2C bus, to communicate and transfer the data between devices. An accelerometer is an electromechanical device used to measure acceleration forces, such as gravity and the dynamic movement of the device. It can measure along the x, y, and z axis with a g-force range of +/-2g to +/-16g. It is a widely used device in many applications typically used, such as video game devices, medical instrumentation, industrial instrumentation, navigation devices, and hard disk drive protection. The ADXL345 is ultralow power making it suitable for portable applications.
+
+Looking at the register map, 0x32 and 0x33 are the hexadecimal address locations for the x-axis data bits. By changing these values to represent the Y-axis’s LSB (0x34) and MSB (0x35), the accelerometer is able to read the Y-axis. This process can be repeated with the z-axis with regards to the correct LSB and MSB hexadecimal values of 0x36 and 0x37.
